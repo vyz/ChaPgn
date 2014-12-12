@@ -131,7 +131,7 @@ namespace mypo
             MoveFromBook            = 32
         }
         
-        /// <summary>Move description</summary>
+        /// <summary>Описание хода</summary>
         public struct MovePosS {
             /// <summary>Original piece if a piece has been eaten</summary>
             public PieceE       OriginalPiece;
