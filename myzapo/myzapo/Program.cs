@@ -2,29 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.IO;
-using mypo;
 
 namespace myzapo
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
-            string failo = Properties.Settings.Default.FiloIn;
-            PgnUtil worka = new PgnUtil();
-            List<vanparty> partyset = worka.FillListBoxWithDesc(PgnUtil.OpenInpFile(failo));
-            failo = Properties.Settings.Default.FiloOut;
-            StreamWriter wiw = new StreamWriter(failo, false, Encoding.UTF8);
-            foreach (vanparty aa in partyset)
-            {
-                aa.RussianRegExpSymbols();
-                foreach (string bb in aa.Abzatz)
-                {
-                    wiw.WriteLine(bb);
+
+        /// <summary>
+        /// 
+        /// Модификация от 16 декабря 2014 года
+        /// Заложен 16 декабря 2014 года
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args) {
+            int deystvo = Properties.Settings.Default.Deystvo;
+            mano mn = new mano();
+
+            if (deystvo == 1) {
+                string failoin = Properties.Settings.Default.FiloIn;
+                string failoout = Properties.Settings.Default.FiloOut;
+                mn.ConvertVanFile(failoin, failoout);
+            } else if (deystvo == 2) {
+                string dirin = Properties.Settings.Default.Diroin;
+                string dirout = Properties.Settings.Default.Diroout;
+                mn.ConvertAllDirectory(dirin, dirout);
                 }
             }
-            wiw.Close();
+
         }
     }
-}

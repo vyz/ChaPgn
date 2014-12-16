@@ -40,5 +40,32 @@ namespace myzapo.Properties {
                 return ((string)(this["FiloOut"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int Deystvo {
+            get {
+                return ((int)(this["Deystvo"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c:\\papgn\\ino")]
+        public string Diroin {
+            get {
+                return ((string)(this["Diroin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c:\\papgn\\outo")]
+        public string Diroout {
+            get {
+                return ((string)(this["Diroout"]));
+            }
+        }
     }
 }
